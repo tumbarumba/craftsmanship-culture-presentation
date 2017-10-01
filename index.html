@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Learning, Communication, Quality, and Craftsmanship</title>
+    <title>Learning, Communication, and Culture</title>
 
     <meta name="author" content="Joe Schmetzer">
     <meta name="description" content="Culture is difficult to describe, but it has a huge impact on the successful adoption of new techniques. What cultural factors allow successful change? This talk explores growth mindset, mutual learning, communication patterns, and quality focus as enablers to the adoption of craftsmanship.">
@@ -25,16 +25,38 @@
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
 
+    <style type="text/css">
+        .reveal .footer {
+            position: absolute;
+            padding: 1em;
+            bottom: 0;
+            left: 0;
+            font-size: 0.75em;
+            width: 100%;
+            text-align: center;
+            background-color: #ddd;
+            border-top: 1px solid #aaa;
+            display: none;
+        }
+        #title h1 { font-size: 2em; }
+        #title h2 { font-size: 1.2em; }
+    </style>
+
     <!--[if lt IE 9]>
     <script src="reveal.js/js/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
     <div class="reveal">
+        <div class="footer">
+            <p><span class="footer-title">Learning, Communication, and Culture</span> &bullet; <a href="https://twitter.com/tumbarumba">@tumbarumba</a></p>
+        </div>
         <div class="slides">
-            <section id="title">
-                <h2>Learning, Communication,<br>
-                    Quality, and Craftsmanship</h2>
+            <section id="title" data-hide-footer="true">
+                <h1>Learning, Communication,<br>
+                    and Culture</h1>
+                <h2>Improving Collaboration with the Business</h2>
+                <p>&nbsp;</p>
                 <p>Joe Schmetzer &bullet; <a href="https://twitter.com/tumbarumba">@tumbarumba</a></p>
                 <aside class="notes">
                     <p>No notes in the introduction...</p>
@@ -71,12 +93,15 @@
                 </aside>
             </section>
             -->
-            <--
+
+            <!--
 
             Failed transform story
             Theme: Facilitating the Adoption of Craftmanship
               - Barriers to adoption
                 - Culture
+                - Theory X and Y
+                  - Taylorism
               - Learning and Communication to facilitate adoption
                 - Mutual Learning Model
                 - Clean Questions
@@ -84,11 +109,9 @@
 
 
             Hi, I'm Joe. (picture me yawning at Robert Menzies College ball, or perhaps zombie Joe?)
-            I work in a bank (picture of bank?)
-            ... with rather medieval views on software development (picture of slave galley, people being whipped?)
 
             I'm going to start with a story.
-            I was involved in a large departmental lean and agile transformation
+            I was involved in a large departmental lean and agile transformation in a bank
             - the background: high tech debt, low autonomy, high attrition
             - the vision (monty python holy grail)
             - assembling the team (?)
@@ -251,6 +274,14 @@
                 { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
                 { src: 'reveal.js/plugin/notes/notes.js', async: true }
             ]
+        });
+
+        Reveal.addEventListener('slidechanged', function(event) {
+            if ('title' === event.currentSlide.id ) {
+                document.querySelector('.reveal .footer').style.display = 'none';
+            } else {
+                document.querySelector('.reveal .footer').style.display = 'block';
+            }
         });
     </script>
 </body>
