@@ -26,7 +26,7 @@
     </script>
 
     <style type="text/css">
-        .reveal .footer {
+        .reveal > .footer {
             position: absolute;
             padding: 1em;
             bottom: 0;
@@ -36,10 +36,13 @@
             text-align: center;
             background-color: #ddd;
             border-top: 1px solid #aaa;
-            display: none;
         }
+
         #title h1 { font-size: 2em; }
         #title h2 { font-size: 1.2em; }
+
+        .section-header > ol > li { color: #999; }
+        .section-header > ol > li.active { color: #000; font-size: larger; }
     </style>
 
     <!--[if lt IE 9]>
@@ -52,7 +55,7 @@
             <p><span class="footer-title">Learning, Communication, and Culture</span> &bullet; <a href="https://twitter.com/tumbarumba">@tumbarumba</a></p>
         </div>
         <div class="slides">
-            <section id="title" data-hide-footer="true">
+            <section id="title">
                 <h1>Learning, Communication,<br>
                     and Culture</h1>
                 <h2>Improving Collaboration with the Business</h2>
@@ -62,37 +65,80 @@
                     <p>No notes in the introduction...</p>
                 </aside>
             </section>
-            <section id="culture">
-                <h2>Culture</h2>
-                <aside class="notes">
-                </aside>
+            <section>
+                <section id="story" class="section-header">
+                    <ol>
+                        <li class="active">Story</li>
+                        <li>Culture</li>
+                        <li>Learning</li>
+                        <li>Communication</li>
+                    </ol>
+                    <aside class="notes">
+                        <ul>
+                            <li>I've split this talk into 3 parts:
+                                <ul>
+                                    <li>Story of the failed transformation</li>
+                                    <li>Culture. What is it? How does it affect what we do?</li>
+                                    <li>Learning and Communication. Useful tools to </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transform-start">
+                    <p>The Lean/Agile Transformation</p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <!--
+                <section id="">
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                I was involved in a large departmental lean and agile transformation in a bank
+                - the background: high tech debt, low autonomy, high attrition
+                - the vision (monty python holy grail)
+                - assembling the team (?)
+                - I was focussing on XP practices
+                - setting the goal
+                - infighting (who's the boss? who's the best coach?)
+                - evaporation of support
+                - stop that, we've got real work to do
+                - I exited
+                -->
             </section>
-            <section id="learning">
-                <h2>Learning</h2>
-                <aside class="notes">
-                </aside>
+            <section>
+                <section id="culture" class="section-header">
+                    <ol>
+                        <li>Story</li>
+                        <li class="active">Culture</li>
+                        <li>Learning</li>
+                        <li>Communication</li>
+                    </ol>
+                </section>
             </section>
-            <section id="communication">
-                <h2>Communication</h2>
-                <aside class="notes">
-                </aside>
+            <section>
+                <section id="learning" class="section-header">
+                    <ol>
+                        <li>Story</li>
+                        <li>Culture</li>
+                        <li class="active">Learning</li>
+                        <li>Communication</li>
+                    </ol>
+                </section>
             </section>
-            <section id="quality">
-                <h2>Quality</h2>
-                <aside class="notes">
-                </aside>
+            <section>
+                <section id="communication" class="section-header">
+                    <ol>
+                        <li>Story</li>
+                        <li>Culture</li>
+                        <li>Learning</li>
+                        <li class="active">Communication</li>
+                    </ol>
+                </section>
             </section>
-            <section id="craftmanship">
-                <h2>Craftmanship</h2>
-                <aside class="notes">
-                </aside>
-            </section>
-            <!--
-            <section id="">
-                <aside class="notes">
-                </aside>
-            </section>
-            -->
 
             <!--
 
@@ -196,6 +242,8 @@
 
             Autonomy, Mastery, Purpose. - Daniel Pink, Drive
 
+            Teams! Teams! Teams! That's the basic unit of productivity
+
             Joshua Kerievsky: stop calling them "technical practices"
             https://www.linkedin.com/pulse/stop-calling-them-technical-practices-joshua-kerievsky/
             Technical debt cripples many businesses. Engineers use practices like Refactoring to manage
@@ -225,6 +273,22 @@
             Alistair Cockburn:
             - no company has successfully changed from Waterfall to agile
             - growth mindset: are there books, etc on peoples desks?
+            - https://youtu.be/150OSyFUU_w?t=54m34s
+              - Question was: "How do you get a large organisations to change a culture, where extending yourself beyond your job title is very high risk"
+              - Answer was: I haven't heard of any success stories
+              - Borland, 2006. Visited office where everyone was working in agile. How did you transform? We didn't, we
+              opened a new building. We only invited people in with the right attitude. We don't try to convert people
+              from "thinking A" to "thinking B"
+              - Real Estate Australia story
+                - 200 people were transformed in 2 years.
+                - This was a "fast" transformation
+                - Senior manager always says "sure", "yes". He let things happen
+              - Alistair recalled going to a company, CTO asked him "how do I make people curious". He said "It's too
+                late, you hired the wrong people"
+              - 2 parts:
+                - let them in the door (i.e. hire people with the right mindset)
+                - just say yes all the time
+
 
             Lynn Runnels-Moss: communication patterns
 
@@ -239,6 +303,7 @@
 
 
             Teal organisations go for the head shot of the senior management zombies
+
 
             Daniel Pink, Drive:
             - ROWE— a results-only work environment.
@@ -274,14 +339,6 @@
                 { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
                 { src: 'reveal.js/plugin/notes/notes.js', async: true }
             ]
-        });
-
-        Reveal.addEventListener('slidechanged', function(event) {
-            if ('title' === event.currentSlide.id ) {
-                document.querySelector('.reveal .footer').style.display = 'none';
-            } else {
-                document.querySelector('.reveal .footer').style.display = 'block';
-            }
         });
     </script>
 </body>
