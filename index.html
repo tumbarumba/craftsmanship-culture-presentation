@@ -46,6 +46,10 @@
             line-height: 1;
         }
 
+        .reveal .upcoming-slide iframe .footer {
+            display: none;
+        }
+
         .reveal > .slides section {
             margin-bottom: 130px; // leave room for footer
         }
@@ -86,6 +90,13 @@
                     <p>No notes in the introduction...</p>
                 </aside>
             </section>
+            <section id="joe">
+                <h2>Hi, I'm Joe Schmetzer</h2>
+                <img alt="Joe Schmetzer" src="images/joe-zombie.jpg" style="width: 300px; height: 300px;">
+                <aside class="notes">
+                    <p></p>
+                </aside>
+            </section>
             <section>
                 <section id="story" class="section-header slide-with-background" data-background-image="images/Tsunami_by_hokusai_19th_century.jpg">
                     <ol>
@@ -107,28 +118,98 @@
                     </aside>
                 </section>
                 <section id="transform-start">
-                    <p>The Lean/Agile Transformation</p>
+                    <h2>The Lean/Agile Transformation</h2>
                     <aside class="notes">
+                        <ul>
+                            <li>I was involved in a large departmental lean and agile transformation in an unnamed bank</li>
+                        </ul>
                     </aside>
                 </section>
-
-                <!--
-                <section id="">
+                <section id="transform-context">
+                    <h2>Transformation context</h2>
                     <aside class="notes">
+                        <ul>
+                            <li>Large department, 400 or so developers, London based as well as offshore</li>
+                            <li>Previous offshoring had gutted the institutional knowledge</li>
+                            <li>High tech debt</li>
+                            <li>Low autonomy</li>
+                            <li>High attrition</li>
+                        </ul>
                     </aside>
                 </section>
-
-                I was involved in a large departmental lean and agile transformation in a bank
-                - the background: high tech debt, low autonomy, high attrition
-                - the vision (monty python holy grail)
-                - assembling the team (?)
-                - I was focussing on XP practices
-                - setting the goal
-                - infighting (who's the boss? who's the best coach?)
-                - evaporation of support
-                - stop that, we've got real work to do
-                - I exited
-                -->
+                <section id="transform-vision">
+                    <h2>Transformation vision</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Wipe the slate clean</li>
+                            <li>Vision dictated by a full business engagement (not just IT!)</li>
+                            <li>Change the product ownership model, specifications and technical practices</li>
+                            <li>Leadership from all levels (Turn the Ship Around)</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transform-team">
+                    <h2>Assembling the coaching team</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>External expert coaches</li>
+                            <li>Technical practices coach (me!)</li>
+                            <li>Lean specialists</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transform-goal">
+                    <h2>Setting the transformation goals</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Improve the effectiveness of teams, through
+                                <ul>
+                                    <li>better teamwork</li>
+                                    <li>better skills</li>
+                                </ul>
+                            </li>
+                            <li>Increase happiness</li>
+                            <li>Reduce the lead time</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transformation-too-many-cooks">
+                    <h2>Too many cooks</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>First problem: unclear leadership</li>
+                            <li>Two senior leaders could agree to a clear set of priorities</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transformation-not-enough-cooks">
+                    <h2>Not enough cooks</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Second problem: missing leadership</li>
+                            <li>Transferred to other departments, unable to contribute and provide top cover</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transformation-stop-distracting-everyone">
+                    <h2>Stop distracting everyone</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Third problem: stop distracting people, we've got to hit deadlines!</li>
+                            <li>Annual planning cycle had put too much work in our backlog</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="transformation-exit">
+                    <h2>Time to leave...</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>I exited here</li>
+                            <li>Senior support evaporated, unable to negotiate on deadlines</li>
+                            <li>Management <strong>didn't want to change</strong> (heros who have been promoted)</li>
+                        </ul>
+                    </aside>
+                </section>
             </section>
             <section>
                 <section id="culture" class="section-header slide-with-background" data-background-image="images/Tsunami_by_hokusai_19th_century.jpg">
@@ -138,7 +219,164 @@
                         <li>Learning</li>
                         <li>Communication</li>
                     </ol>
+                    <aside class="notes">
+                        <ul>
+                            <li>The story I just told is sadly very common</li>
+                            <li>There are a lot of kernels of learning in there.</li>
+                            <li>I'd like to use the rest of this talk to explore:
+                                <ul>
+                                    <li>How do we make changes to the way we work as a team? A department? A company?</li>
+                                    <li>Root causes of failure to change</li>
+                                    <li>Strategies to avoid the pitfalls</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
                 </section>
+                <section id="change-is-hard">
+                    <h2>Change is hard</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Alistair Cockburn was asked a question last year:
+                                <ul>
+                                    <li>Q: How do you get a large organisations to change a culture?</li>
+                                    <li>A: I haven't heard of any success stories</li>
+                                </ul>
+                            </li>
+                            <li>Limited success stories:
+                                <ul>
+                                    <li>Real Estate Australia: 200 people, 2 years, driven from the top</li>
+                                    <li>Borland: set up a brand new office</li>
+                                </ul>
+                            </li>
+                            <li>Mindset is key</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="secret-teaser">
+                    <h2>The secret to successful change is...</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Simple to explain, a bit more complex to explain</li>
+                            <li>Culture is key</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="what-is-culture">
+                    <h2>What is Culture?</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Many definitions</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="culture-definition">
+                    <p>Whatever people learn from other people, and transmit to other people, especially by interacting with them</p>
+                    <aside class="notes">
+                        <ul>
+                            <li><strong>Embodied culture</strong> is the things we don’t event need to think about</li>
+                            <li>Values and goals that guide our actions</li>
+                            <li><strong>Habitus</strong>: many of our habits are acquired as part of the culture in which we are immersed</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="four-forces-of-culture">
+                    <h2>The 4 Forces of Culture</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>When thinking about changing culture, it helps to understand the various forces working
+                            on culture</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="inertial-force">
+                    <h2>1. Intertial Force</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>Laws of motion:
+                                <ul>
+                                    <li>an object at rest wants to stay at rest</li>
+                                    <li>an object in motion wants to keep to the same speed and direction</li>
+                                </ul>
+                            </li>
+                            <li><strong>Existential interia</strong> (story about cutting the ends of the meat)</li>
+                            <li><strong>Habitual intertia</strong> (e.g. accent and speaking, default set of tools we use</li>
+                        </ul>
+                    </aside>
+                    <section id="entropic-force">
+                        <h2>2. Entropic Force</h2>
+                        <aside class="notes">
+                            <ul>
+                                <li>the tendency towards disorder in the transmission of culture</li>
+                                <li>works against inertia</li>
+                            </ul>
+                        </aside>
+                    </section>
+                </section>
+                <section id="reflective-force">
+                    <h2>3. Reflective (Metacultural) Force</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>metaculture is culture that is about (or reflects upon) other culture.</li>
+                            <li>e.g. laws, policies, rules</li>
+                            <li>New rules and policies can be created by those in power or with influence</li>
+                            <li>Can act to both keep things the same, or as an agent of change</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="force-of-interest">
+                    <h2>4. The Force of Interest</h2>
+                    <aside class="notes">
+                        <ul>
+                            <li>these are produced by the feelings and emotions</li>
+                            <li>a good leader understands the emotional responses to cultural elements, and uses this to affect change</li>
+                            <li>Incremental new-ness can a positive attractive force. (e.g. new model of a car every year)</li>
+                            <li>Force of interest can either work to keep culture static, or it could drive culture to change. It’s at the heart
+                                of successful culture change</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="all-the-forces">
+                    <h2>All the forces:</h2>
+                    <ol>
+                        <li>Intertial Force</li>
+                        <li>Entropic Force</li>
+                        <li>Reflective (Metacultural) Force</li>
+                        <li>The Force of Interest</li>
+                    </ol>
+                    <aside class="notes">
+                        <ul>
+                            <li>All the forces can work with each other, or in opposition</li>
+                            <li>Successful change involves harnessing all the forces towards the desired outcome</li>
+                        </ul>
+                    </aside>
+                </section>
+                <section id="the-secret">
+                    <h2>The Secret to Successful Culture Change</h2>
+                    <blockquote>the new culture must appear to grow organically out of the old culture</blockquote>
+                    <aside class="notes">
+                        <ul>
+                            <li>It must be new enough to be recognisable as different, but also sufficiently similar
+                                that its relationship to the old culture can be sensed.</li>
+                            <li>Feelings or affections can propel the motion of culture, or inhibit it. These feelings are hugely influential.</li>
+                        </ul>
+                    </aside>
+                </section>
+                <!--
+                <section id="">
+                    <h2></h2>
+                    <aside class="notes">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </aside>
+                </section>
+
+                Ethnography - the study of people and culture
+
+                Fieldwork
+
+                -->
             </section>
             <section>
                 <section id="learning" class="section-header slide-with-background" data-background-image="images/Tsunami_by_hokusai_19th_century.jpg">
@@ -184,20 +422,6 @@
                 - Reframing - technical to business terms
 
 
-            Hi, I'm Joe. (picture me yawning at Robert Menzies College ball, or perhaps zombie Joe?)
-
-            I'm going to start with a story.
-            I was involved in a large departmental lean and agile transformation in a bank
-            - the background: high tech debt, low autonomy, high attrition
-            - the vision (monty python holy grail)
-            - assembling the team (?)
-            - I was focussing on XP practices
-            - setting the goal
-            - infighting (who's the boss? who's the best coach?)
-            - evaporation of support
-            - stop that, we've got real work to do
-            - I exited
-
             "Software Craftsmanship is about professionalism in software development." Sandro Mancuso
 
             What happens when you work in an environment where you're not allowed to be "professional"?
@@ -223,43 +447,6 @@
             This is a talk about mutual learning. How can you understand the business problems better.
             How can the business understand the craftmanship approach better?
 
-            Culture
-
-            What is culture?
-
-            Culture is
-            - whatever people learn from other people, and transmit to other people, especially by interacting with them.
-            - Embodied culture is the things we don’t event need to think about (e.g. dribbling ball, singing anthem, attitudes to horse meat)
-            - Values and goals that guide our actions
-            - Habitus: many of our habits are acquired as part of the culture in which we are immersed
-
-            Forces of culture
-            - Intertial forces
-                - existential inertia
-                    - story about cutting the ends of the meat before roasting
-                - habitual intertia
-                    - accent and speaking
-            - Entropic force
-                - the tendency towards disorder in the transmission of culture
-                - works against inertia
-            - Reflective or metacultural forces:
-                - metaculture is culture that is about (or reflects upon) other culture.
-                - Metacultural force result from reflection about culture
-            - The forces of interest: these are produced by the feelings and emotions.
-                - they impel or retard the movement of cultural elements
-                - a good leader understands the emotional responses to cultural elements, and uses this to affect change
-                - Force of interest can either work to keep culture static, or it could drive culture to change. It’s at the heart
-                    of successful culture change
-                - Incremental new-ness can a positive attractive force. (e.g. new model of a car every year)
-
-            The Secret to Successful Culture Change
-            - the new culture must appear to grow organically out of the old culture.
-            - It must be new enough to be recognisable as different, but also sufficiently similar that its relationship to the old culture can be sensed.
-            - Feelings or affections can propel the motion of culture, or inhibit it. These feelings are hugely influential.
-
-            Ethnography - the study of people and culture
-
-            Fieldwork
 
             Learning...
 
