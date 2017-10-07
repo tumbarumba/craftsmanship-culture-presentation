@@ -1,4 +1,4 @@
-# Learning, Communication, Quality, and Craftsmanship
+# Learning, Communication, and Craftsmanship
 
 Culture is difficult to describe, but it has a huge impact on the successful adoption of new
 techniques. What cultural factors allow successful change? This talk explores growth mindset,
