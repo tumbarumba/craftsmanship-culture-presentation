@@ -5,7 +5,7 @@ techniques. What cultural factors allow successful change? This talk explores gr
 mutual learning, communication patterns, and quality focus as enablers to the adoption of craftsmanship.
 
 The presentation can be viewed online at 
-[https://tumbarumba.github.io/craftmanship-culture-presentation/](https://tumbarumba.github.io/craftmanship-culture-presentation/).
+[https://tumbarumba.github.io/craftsmanship-culture-presentation/](https://tumbarumba.github.io/craftsmanship-culture-presentation/).
  
 Note that this presentation has been built using [reveal.js](http://lab.hakim.se/reveal-js/), which means
 all the usual reveal.js keybindings will work, including:
